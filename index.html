@@ -102,6 +102,72 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+
+    errorBtns[0].addEventListener('click', () => {
+      console.log("log");
+    });
+    errorBtns[1].addEventListener('click', () => {
+      console.error("error");
+    });
+    errorBtns[2].addEventListener('click', () => {
+      console.count("count");
+    });
+    errorBtns[3].addEventListener('click', () => {
+      console.warn("warn");
+    });
+    errorBtns[4].addEventListener('click', () => {
+      const x = 5;
+      const reason = "I thought x was 5"
+      console.assert(x == 5, {x, reason});
+    });
+    errorBtns[5].addEventListener('click', () => {
+      console.clear();
+    });
+    errorBtns[6].addEventListener('click', () => {
+      console.dir(document.getElementById("error-btns"));
+    });
+    errorBtns[7].addEventListener('click', () => {
+      console.dirxml(document.getElementById("error-btns"));
+    });
+    errorBtns[8].addEventListener('click', () => {
+      const label = "Console Calls";
+      console.group(label);
+    });
+    errorBtns[9].addEventListener('click', () => {
+      const label = "Console Calls End";
+      console.groupEnd(label);
+    });
+    errorBtns[10].addEventListener('click', () => {
+      const arr = [
+        {
+          name: "Bulbasaur",
+          type: "Grass",
+        },
+        {
+          name: "Charmander",
+          type: "Fire",
+        },
+        {
+          name: "Squirtle",
+          type: "Water",
+        }
+      ];
+      console.table(arr);
+    });
+    errorBtns[11].addEventListener('click', () => {
+      const label = "Time Start";
+      console.time(label);
+    });
+    errorBtns[12].addEventListener('click', () => {
+      const label = "Time End";
+      console.timeEnd(label);
+    });
+    errorBtns[13].addEventListener('click', () => {
+      const first = () => {second();};
+      const second = () => {console.trace();};
+      first();
+    });
+    
   </script>
 </body>
 
